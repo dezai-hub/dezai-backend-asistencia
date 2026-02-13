@@ -1,0 +1,40 @@
+{
+  "name": "dezai-checador-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:prod": "ng build --configuration production",
+    "cap:sync": "npx cap sync"
+  },
+  "dependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/compiler": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "@angular/forms": "^19.0.0",
+    "@angular/platform-browser": "^19.0.0",
+    "@angular/router": "^19.0.0",
+    "@ionic/angular": "^8.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/camera": "^6.0.0",
+    "@capacitor/geolocation": "^6.0.0",
+    "@capacitor/network": "^6.0.0",
+    "@capacitor/preferences": "^6.0.0",
+    "@capacitor-community/sqlite": "^6.0.0",
+    "ionicons": "^7.0.0",
+    "jeep-sqlite": "^2.7.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^19.0.0",
+    "@angular/cli": "^19.0.0",
+    "@angular/compiler-cli": "^19.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/android": "^6.0.0",
+    "typescript": "~5.6.0"
+  }
+}

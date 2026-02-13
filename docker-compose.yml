@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: constructora_postgresql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 6f1e8e1a1626e9773b18
+      POSTGRES_DB: constructora
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - dezai-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: dezai-backend
+    depends_on:
+      - postgres
+    env_file:
+      - ./backend/.env
+    ports:
+      - '3000:3000'
+    networks:
+      - dezai-network
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+
+networks:
+  dezai-network:
+    driver: bridge

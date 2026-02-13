@@ -1,0 +1,7 @@
+{
+  "name": "dezai-checador",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
