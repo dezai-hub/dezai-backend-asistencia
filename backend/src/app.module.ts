@@ -7,6 +7,7 @@ import { WorkersModule } from './workers/workers.module';
 import { AttendanceModule } from './attendance/attendance.module';
 import { AwsModule } from './aws/aws.module';
 import { AutoSeedService } from './auto-seed.service';
+import { User } from './users/entities/user.entity';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { AutoSeedService } from './auto-seed.service';
     UsersModule,
     WorkersModule,
     AttendanceModule,
+    TypeOrmModule.forFeature([User]),
   ],
   providers: [AutoSeedService],
 })
