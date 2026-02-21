@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://api.getziva.com',
+  apiUrl: 'https://constructora-demo-asistencia.ahitrj.easypanel.host',
 };

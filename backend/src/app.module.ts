@@ -6,6 +6,7 @@ import { UsersModule } from './users/users.module';
 import { WorkersModule } from './workers/workers.module';
 import { AttendanceModule } from './attendance/attendance.module';
 import { AwsModule } from './aws/aws.module';
+import { AutoSeedService } from './auto-seed.service';
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { AwsModule } from './aws/aws.module';
         type: 'postgres',
         url: config.get<string>('DATABASE_URL'),
         autoLoadEntities: true,
-        synchronize: false,
+        synchronize: true,
       }),
     }),
     AwsModule,
@@ -26,5 +27,6 @@ import { AwsModule } from './aws/aws.module';
     WorkersModule,
     AttendanceModule,
   ],
+  providers: [AutoSeedService],
 })
 export class AppModule {}
